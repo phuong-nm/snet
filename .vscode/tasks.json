@@ -14,6 +14,18 @@
             "group": "build"
         },
         {
+            "label": "configure bluenrg",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-B", "build",
+                "-DUNITY_EXTENSION_FIXTURE=ON",
+                "-DCMAKE_TOOLCHAIN_FILE='tools/armgcc_toolchain_linux.cmake'",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "group": "build"
+        },
+        {
             "label": "build",
             "type": "shell",
             "command": "cmake",
